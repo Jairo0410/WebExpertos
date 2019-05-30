@@ -14,6 +14,7 @@ $descripcion = $atractivo->getDescripcion();
 $latitud = $atractivo->getLatitud();
 $longitud = $atractivo->getLongitud();
 
+$servicios = isset($vars['servicios']) ? $vars['servicios'] : array();
 ?>
 
 <div class="row">
@@ -30,9 +31,9 @@ $longitud = $atractivo->getLongitud();
 
     <h3>Servicios que ofrecemos:</h3>
     <ul>
-      <li>Primero</li>
-      <li>Segundo</li>
-      <li>Tercero</li>
+      <?php foreach($servicios as $key => $servicio) {?>
+      <li> <?= $servicio ?> </li>
+      <?php } ?>
     </ul>
 
   </div>

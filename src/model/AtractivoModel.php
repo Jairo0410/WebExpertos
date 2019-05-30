@@ -30,7 +30,7 @@ class AtractivoModel{
   }
 
   public function obtenerServiciosAtractivo($id_atractivo) : array{
-    return array('Primero', 'Segundo', 'Tercero');
+    return array('Ley 7600', 'Rampas', 'Aceras no videntes');
   }
 
 }

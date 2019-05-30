@@ -12,6 +12,8 @@
     <title><?= isset($title) ? $title : "Proyecto Web Expertos"; ?></title>
   </head>
   <body>
-  	<?php 
-  		include_once 'navbar.php';
-  	?>
+    <div class="container-fluid" style="display: grid;">
+    	<?php 
+    		include_once 'navbar.php';
+    	?>
+    

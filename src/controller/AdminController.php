@@ -2,16 +2,19 @@
 
 require_once routeLibs.'View.php';
 
-class SexController{
+class AdminController{
 
-  public function guess_sex(){
-    require_once routeModel.'SexModel.php';
-    $model = new SexModel();
+ 	public function default(){
+    	view('admin.php');
+  	}
 
-    $data['sexes'] = $model->get_sexes();
-    view('sex_form.php', $data);
-  }
+	public function addLocation(/*Values*/){
+  		//TODO
+  	}
 
+	public function removeLocation(/*Values*/){
+  		//TODO
+  	}
 }
 
 ?>

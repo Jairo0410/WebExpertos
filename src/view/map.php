@@ -1,4 +1,4 @@
-<div id="map"></div>
+<div id="map" class="col-lg-6"></div>
 <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {

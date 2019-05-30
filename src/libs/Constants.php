@@ -14,4 +14,5 @@ define("routeController",  __DIR__."/../controller/");
 define("routeModel",  __DIR__."/../model/");
 define("routeView",  __DIR__."/../view/");
 define("routeLibs", __DIR__."/../libs/");
+define("routeDomain", __DIR__."/../domain/");
 ?>

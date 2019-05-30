@@ -10,19 +10,13 @@
         <a class="nav-link" href="?controller=Default&action=home"> Inicio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="?controller=Network&action=show_form"> Redes <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="?controller=Admin&action=default"> Administracion <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="?controller=Teacher&action=show_form">Maestros </a>
+        <a class="nav-link" href="?controller=Recommendation&action=default"> Recomendaciones</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="?controller=Learning&action=guess_style">Aprendizaje </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="?controller=Sex&action=guess_sex">Sexo </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="?controller=Headquarter&action=guess_headquarter">Recinto </a>
+        <a class="nav-link" href="?controller=Place&action=default"> Lugar </a>
       </li>
     </ul>
   </div>

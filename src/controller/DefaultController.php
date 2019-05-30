@@ -5,7 +5,7 @@ require_once routeLibs.'View.php';
 class DefaultController{
 
   public function home(){
-    view('home.html');
+    view('home.php');
   }
 
   public function notFound($message = 'Error 404 - Not Found'){

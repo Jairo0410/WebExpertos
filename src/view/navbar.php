@@ -10,7 +10,7 @@
         <a class="nav-link" href="?controller=Default&action=home"> Inicio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="?controller=Admin&action=default"> Administracion <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="?controller=Recommendation&action=agregarAtractivo"> Administracion <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="?controller=Recommendation&action=default"> Recomendaciones</a>

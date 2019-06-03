@@ -1,5 +1,3 @@
-<?= view('header.php'); ?>
-
 <?php
 	include_once 'header.php';
 ?>
@@ -41,4 +39,6 @@
 
 </form>
 
-<?= view('footer.php'); ?>
+<?php
+  	include_once 'footer.php';
+?>

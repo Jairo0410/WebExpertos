@@ -9,9 +9,9 @@ define("default_schema", "sql9296819");
 define("GOOGLE_MAPS_API_KEY", "AIzaSyCvKIF8uhB8umbV0gBZpHYX2CF7xL2Zfdc");
 
 // tablas base de datos
-define(TBL_LUGAR, "Lugar");
-define(TBL_USUARIO, "Usuario");
-define(TBL_LUGAR_ESTILO, "Lugar_Pertenece_Estilo");
+define("TBL_LUGAR", "Lugar");
+define("TBL_USUARIO", "Usuario");
+define("TBL_LUGAR_ESTILO", "Lugar_Pertenece_Estilo");
 
 // constantes para el manejo de las diferentes carpetas
 define("ROOT", __DIR__."/../");

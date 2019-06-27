@@ -11,8 +11,8 @@
     
     <title><?= isset($title) ? $title : "Proyecto Web Expertos"; ?></title>
   </head>
-  <body>
-    <div class="container-fluid" style="display: grid;">
+  <body style="background-image: url('../public_html/assets/background.jpg');  background-attachment: fixed;">
+    <div style="display: grid; background-color: rgba(255,255,255,0.5);">
     	<?php 
     		include_once 'navbar.php';
     	?>

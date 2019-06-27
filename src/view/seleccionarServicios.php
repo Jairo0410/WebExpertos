@@ -24,9 +24,11 @@
 	<h4>Restricciones o facilidades</h4> 
 	<br />
 
-	<?php foreach ($vars['servicios'] as $s => $value) {
-		echo '<label><input type="checkbox" id="" value="'. $value[0] .'"> ' . $value[1] . '</label><br>';
-	} ?>
+	<?php foreach ($vars['servicios'] as $s => $value) { ?>
+		<input type="checkbox" name="<?= 'cbx'.$value[0] ?>" value="<?= $value[0] ?>"> 
+		<label> <?= $value[1] ?> </label>
+		<br>
+	<?php } ?>
 	<br />
 	<input type="submit" name="buscar" value="Buscar ofertas o promociones" class="btn btn-primary">
 

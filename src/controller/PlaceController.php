@@ -5,7 +5,7 @@ require_once routeLibs.'View.php';
 class placeController{
 
   	public function default(){
-			$id = isset($_GET['id']) ? $_GET['id'] : 0;
+			$id = isset($_GET['id']) ? $_GET['id'] : 1;
 
 			include_once routeModel.'AtractivoModel.php';
 			$model = new AtractivoModel();

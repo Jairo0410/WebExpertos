@@ -16,14 +16,23 @@ class RecommendationController{
 
   public function buscarRecomendaciones(){
 
-  	/*
-  	Obtener datos del form
-	Aplicar distancia euclideana o bayes
-  	*/
-	require_once routeModel.'RecommendationModel.php';
+    require_once routeModel.'RecommendationModel.php';
     $model = new RecommendationModel();
 
-    $data['atractivos'] = $model->getAtractivos();
+    $servicios = $model->getServicios();
+
+    $senderos = isset($_POST[ "cbx0" ]) ? $_POST[ "cbx0" ] : 0;
+    $vegetariana = isset($_POST[ "cbx1" ]) ? $_POST[ "cbx1" ] : 0;
+    $guias = isset($_POST[ "cbx2" ]) ? $_POST[ "cbx2" ] : 1;
+    $souvenirs = isset($_POST[ "cbx3" ]) ? $_POST[ "cbx3" ] : 0;
+    $aire_libre = isset($_POST[ "cbx4" ]) ? $_POST[ "cbx4" ] : 0;
+    $zona_deportiva = isset($_POST[ "cbx5" ]) ? $_POST[ "cbx5" ] : 0;
+    $discapacitados = isset($_POST[ "cbx6" ]) ? $_POST[ "cbx6" ] : 0;
+    $fumado = isset($_POST[ "cbx7" ]) ? $_POST[ "cbx7" ] : 0;
+    $animales = isset($_POST[ "cbx8" ]) ? $_POST[ "cbx8" ] : 0;
+
+    $data['atractivos'] = $model->calcularDiferencias($senderos, $vegetariana, $guias, $souvenirs, $aire_libre, $zona_deportiva, $discapacitados, $fumado, $animales);
+
   	view('buscarRecomendaciones.php', $data);
   }
 

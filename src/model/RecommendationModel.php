@@ -16,10 +16,15 @@ class RecommendationModel{
     //$this->db = Connection::singleton();
 
     $this->servicios = array(
-      array(0,"Tiene elevadores"),
-      array(1,"Tiene equipo de primeros auxilios"),
-      array(3,"Se puede hacer rafting"),
-      array(4,"Se puede bucear")
+      array(0,"Tiene senderos"),
+      array(1,"Ofrece comida vegetariana"),
+      array(2,"Tiene guias turisticos"),
+      array(3,"Venden souvenirs"),
+      array(4,"Hay lugares al aire libre"),
+      array(5,"Hay zona deportiva"),
+      array(4,"Existe acceso para discapacitados"),
+      array(4,"Hay areas de fumado"),
+      array(4,"Se permiten mascotas"),
     );
 
     $this->estereotipos = array(
@@ -68,6 +73,17 @@ class RecommendationModel{
     array_push($this->atractivos, $atractivo);
     */
     return 'Atractivo agregado';
+  }
+
+  public function calcularDiferencias($senderos, $vegetariana,  $guia, $souvenirs, $aire_libre, $zona_deportiva, $discapacitado, $zona_fumado, $animales){
+    $db = Connection::singleton();
+    $smt = $db->prepare("call SP_Obtener_Distancias($senderos, $vegetariana, $guia, $souvenirs, $aire_libre, $zona_deportiva, $discapacitado, $zona_fumado, $animales)");
+    
+    $smt->execute();
+
+    $resultado = $smt->fetchAll();
+
+    return $resultado;
   }
 
   /*

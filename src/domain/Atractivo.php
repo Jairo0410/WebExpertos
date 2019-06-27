@@ -2,6 +2,7 @@
 
 class Atractivo{
 
+  private $id;
   private $ubicacion_longitud;
   private $ubicacion_latitud;
   private $nombre;
@@ -28,6 +29,10 @@ class Atractivo{
 
   public function getLongitud(){
     return $this->ubicacion_longitud;
+  }
+
+  public function setID(int $id){
+    $this->id = $id;
   }
 
 }

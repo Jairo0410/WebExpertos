@@ -9,7 +9,7 @@ class Connection extends PDO{
         user, password);
     }
 
-    public static function singleton(){
+    public static function singleton() : Connection {
         if(!self::$instance instanceof self){
             self::$instance = new self();
         }

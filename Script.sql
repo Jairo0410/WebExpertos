@@ -32,6 +32,22 @@ ALTER TABLE Lugar_Pertenece_Estilo ADD CONSTRAINT FK_Id_lugar FOREIGN KEY (Id_Lu
 ALTER TABLE Lugar_Pertenece_Estilo ADD CONSTRAINT PK_Lugar_Pertenece_Estilo PRIMARY KEY(Nombre_Estilo, Id_Lugar);
 ALTER TABLE Lugar_Pertenece_Estilo ADD CONSTRAINT CK_Nombre_Estilo CHECK (Nombre_Estilo IN('Aventurero', 'Gastronomico', 'Historico', 'Relajacion'));
 
+INSERT INTO Lugar_Pertenece_Estilo VALUES(1,1,0,0,0,1,1,0,1,1,'Relajacion');
+INSERT INTO Lugar_Pertenece_Estilo VALUES(2,0,0,1,0,1,1,0,1,1,'Aventurero');
+INSERT INTO Lugar_Pertenece_Estilo VALUES(3,1,0,0,0,1,1,0,1,1,'Relajacion');
+INSERT INTO Lugar_Pertenece_Estilo VALUES(4,0,0,0,1,1,1,0,0,1,'Aventurero');
+INSERT INTO Lugar_Pertenece_Estilo VALUES(5,0,0,1,1,1,0,0,0,1,'Aventurero');
+INSERT INTO Lugar_Pertenece_Estilo VALUES(6,0,1,0,1,0,0,1,1,0,'Gastronomico');
+INSERT INTO Lugar_Pertenece_Estilo VALUES(7,0,1,0,0,1,0,1,0,0,'Gastronomico');
+INSERT INTO Lugar_Pertenece_Estilo VALUES(8,0,1,1,0,1,0,1,0,0,'Gastronomico');
+INSERT INTO Lugar_Pertenece_Estilo VALUES(9,1,1,1,1,1,0,1,0,0,'Gastronomico');
+INSERT INTO Lugar_Pertenece_Estilo VALUES(10,0,1,0,0,0,0,1,1,0,'Gastronomico');
+INSERT INTO Lugar_Pertenece_Estilo VALUES(11,0,0,1,1,0,0,1,0,0,'Historico');
+INSERT INTO Lugar_Pertenece_Estilo VALUES(12,0,0,1,1,0,0,1,0,0,'Historico');
+INSERT INTO Lugar_Pertenece_Estilo VALUES(13,1,0,1,0,0,0,0,0,0,'Historico');
+INSERT INTO Lugar_Pertenece_Estilo VALUES(14,0,0,1,1,0,0,1,1,0,'Historico');
+INSERT INTO Lugar_Pertenece_Estilo VALUES(15,1,0,0,1,1,0,1,1,1,'Historico');
+
 CREATE TABLE Usuario(dummy int);
 ALTER TABLE Usuario ADD Id int NOT NULL AUTO_INCREMENT PRIMARY KEY;
 ALTER TABLE Usuario ADD Login varchar(64) UNIQUE NOT NULL;
@@ -56,13 +72,11 @@ INSERT INTO Lugar (Nombre, Lat, Lon, Descripcion) VALUES('Pantos Rest', -33.8001
 INSERT INTO Lugar (Nombre, Lat, Lon, Descripcion) VALUES('Normas Rest', -33.920198, 151.257302, 'Comida mexicana');
 
 -- Museos
-
 INSERT INTO Lugar (Nombre, Lat, Lon, Descripcion) VALUES('Gold Museum', -33.890674, 151.179941, 'Se permite el accesso a mascotas para videntes');
 INSERT INTO Lugar (Nombre, Lat, Lon, Descripcion) VALUES('Jade Museum', -33.874441, 151.180266, 'Entrada gratis a menores de 5 annos');
 INSERT INTO Lugar (Nombre, Lat, Lon, Descripcion) VALUES('War Museum', -33.897015, 151.194429, '');
 INSERT INTO Lugar (Nombre, Lat, Lon, Descripcion) VALUES('Peace Museum', -33.912707, 151.163916, 'Abierto 24 horas los fines de semana');
 INSERT INTO Lugar (Nombre, Lat, Lon, Descripcion) VALUES('Art Museum', -33.871986, 151.197137, '');
-
 
 -- Ingresar un nuevo lugar
 DELIMITER $$

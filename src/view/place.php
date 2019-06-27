@@ -44,8 +44,6 @@ $servicios = isset($vars['servicios']) ? $vars['servicios'] : array();
 
 </div>
 
-
-
 <?php 
   include_once 'footer.php';
 ?>
